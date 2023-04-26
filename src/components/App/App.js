@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [input, setInput] = useState(0);
+
   return (
     <div className="App">
       <div className='calculator'>
-        <div className='display' id="display"></div>
+        <div className='display' id="display">
+          <div className='mainExpression' id="mainExpression"></div>
+          <div className='currentInput' id="currentInput">{input}</div>
+        </div>
         <div className='input'>
           <button id="clear" className='clear'>AC</button>
           <button id="divide" className='divide'>/</button>
@@ -20,13 +27,9 @@ function App() {
           <button id="two" className='two'>2</button>
           <button id="one" className='one'>1</button>
           <button id="zero" className='zero'>0</button>
-
           <button id="add" className='add'>+</button>
           <button id="subtract" className='subtract'>-</button>
-          
-          
           <button id="decimal" className='decimal'>.</button>
-          
         </div>
       </div>
       <p>Designed and Coded by <br/> TechSavvySos</p>
