@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
 
-  const [input, setInput] = useState(0);
+  const [input, setInput] = useState(7);
 
   return (
     <div className="App">

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 * {
     box-sizing: border-box;
   }
@@ -24,6 +25,7 @@
     border: 2px solid #000;
     background-color: #000;
     color: #fff;
+    font-family: Orbitron;
 }
 .input {
     height: calc(400px - 17%);
@@ -43,6 +45,7 @@ button {
    font-size: large;
    color: white;
    background-color: #41424C;
+   font-family: Orbitron;
 
 }
 button:hover{
