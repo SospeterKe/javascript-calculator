@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab');
 * {
     box-sizing: border-box;
   }
@@ -25,7 +26,7 @@
     border: 2px solid #000;
     background-color: #000;
     color: #fff;
-    font-family: Orbitron;
+    font-family: Kelly Slab;
 }
 .input {
     height: calc(400px - 17%);
@@ -37,7 +38,12 @@
 .mainExpression , .currentInput{
     width: 100%;
     height: 50%;
-    border: 1px solid red;
+    padding: 5px;
+    text-align: end;
+}
+
+.currentInput {
+    font-size: 15pt;
 }
 
 button {
