@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Kelly+Slab');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 * {
     box-sizing: border-box;
   }
@@ -56,6 +57,9 @@
 
 .currentInput {
     font-size: 15pt;
+}
+p{
+    font-family: Pacifico;
 }
 
 button {

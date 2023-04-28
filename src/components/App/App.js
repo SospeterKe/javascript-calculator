@@ -11,7 +11,7 @@ export default function App() {
     let newClickedNumbers = [];
 
 
-    if (number === "." && clickedNumbers[0] === 0 ) {
+    if (number === "." && clickedNumbers[0] === 0) {
       newClickedNumbers = ['0', '.'];
     } else if (clickedNumbers[0] === 0) {
       newClickedNumbers = [number];
