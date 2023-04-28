@@ -30,11 +30,8 @@ export default function App() {
 
   const handleEqualClick = () => {
     let expression = clickedNumbers.join('');
-    function parse(str) {
-      // eslint-disable-next-line no-new-func
-      return Function(`'use strict'; return (${str})`)()
-  }
-    let finalResult = parse(expression);
+    // eslint-disable-next-line no-new-func
+    let finalResult = Function(`'use strict'; return (${expression})`)();
     setResult(finalResult);
   }
 
