@@ -10,7 +10,6 @@ export default function App() {
   function handleClick(number) {
     let newClickedNumbers = [];
 
-
     if (number === "." && clickedNumbers[0] === 0) {
       newClickedNumbers = ['0', '.'];
     } else if (clickedNumbers[0] === 0) {
@@ -23,7 +22,6 @@ export default function App() {
       newClickedNumbers = [0];
       setResult('0');
     }
-
     setClickedNumber(newClickedNumbers);
   }
 
@@ -31,12 +29,11 @@ export default function App() {
   const handleEqualClick = () => {
     let expression = clickedNumbers.join('');
     // eslint-disable-next-line no-new-func
-    let finalResult = Function(`'use strict'; return (${expression})`)();
-    setResult(finalResult);
+    let result = Function(`'use strict'; return (${expression})`)();
+    setResult(result);
   }
 
   
-
   return (
     <div className="App">
       <div className='calculator'>
