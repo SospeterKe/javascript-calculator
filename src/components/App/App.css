@@ -28,8 +28,7 @@
         height: 100%;
     }
     .calculator{
-        width: 100%;
-        
+        width: 100%;  
     }
 }
 
@@ -71,10 +70,12 @@ button {
    font-family: Orbitron;
 
 }
-button:hover{
+
+button:active{
     border: 1px solid white;
     color: black;
 }
+
 
 .equals {
     grid-row-start: 4;

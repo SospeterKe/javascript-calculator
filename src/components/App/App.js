@@ -8,7 +8,12 @@ export default function App() {
   const clearButton = 'AC';
 
   function handleClick(number) {
-    let newClickedNumbers = [];
+      let newClickedNumbers = [];
+
+    //prevents entry of multiple consecutive decimal points
+    if(number === '.' && clickedNumbers[clickedNumbers.length - 1] === '.'){
+      return;
+    }
 
     if(number === '0' && clickedNumbers[0] === 0){
       newClickedNumbers = clickedNumbers;
@@ -20,7 +25,7 @@ export default function App() {
     } else {
       newClickedNumbers = [...clickedNumbers, number];
     }
-  
+    //clears the output display
     if (number === clearButton) {
       newClickedNumbers = [0];
       setResult('0');
@@ -31,9 +36,16 @@ export default function App() {
 
   const handleEqualClick = () => {
     let expression = clickedNumbers.join('');
-    // eslint-disable-next-line no-new-func
-    let result = Function(`'use strict'; return (${expression})`)();
-    setResult(result);
+    try{
+      // eslint-disable-next-line no-new-func
+      let result = Function(`'use strict'; return (${expression})`)();
+      setResult(result);
+    } catch{
+      setResult("SYNTAX ERROR!");
+      setClickedNumber('0');
+    }
+    
+    
   }
 
   
