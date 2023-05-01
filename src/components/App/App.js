@@ -20,9 +20,11 @@ export default function App() {
     }
     else if (number === "." && clickedNumbers[0] === 0) {
       newClickedNumbers = ['0', '.'];
-    } else if (clickedNumbers[0] === 0) {
+    }
+    else if (clickedNumbers[0] === 0) {
       newClickedNumbers = [number];
-    } else {
+    } 
+    else {
       newClickedNumbers = [...clickedNumbers, number];
     }
     //clears the output display
